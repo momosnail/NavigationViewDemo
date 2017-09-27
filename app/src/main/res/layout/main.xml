@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:id="@+id/drawer"
+                                        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主页面"/>
+    </LinearLayout>
+    <!--fitsSystemWindows:自适应系统窗口 true交给系统处理 flase 自己处理
+        itemIconTint:设置所有图片的颜色
+        itemTextColor:设置item文本的颜色
+        itemBackground：设置每一个item的背景颜色
+       background:设置整个Menu的背景（除了headerLayout）  -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/header_layout"
+        app:itemIconTint="@color/colorAccent"
+        app:itemTextColor="@color/colorPrimary"
+        app:menu="@menu/main"/>
+</android.support.v4.widget.DrawerLayout>
